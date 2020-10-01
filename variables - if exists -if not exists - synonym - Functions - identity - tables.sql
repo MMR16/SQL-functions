@@ -1,5 +1,5 @@
 --Variables
---golbal Variables starts with @@
+--global Variables starts with @@
 select @@error , @@servername ,@@version, @@rowcount , @@identity
 
 --Local must declare and used with @
@@ -10,7 +10,7 @@ set @x=10 -- initialize
 select @x
 select @x=age from student where id=10  --initialize
 --------------
--- Create Database if exsists or not exsists 
+-- Create Database if exists or not exists 
 IF EXISTS (SELECT * FROM sys.databases WHERE name = 'del') 
 select 'exsist'
 else
@@ -23,7 +23,7 @@ else
 select 'exsist'
 
 -----------------------
---synonym is ashortcut for atable usually used with 
+--synonym is ashortcut for a table usually used with 
 --schema or function or if tables name are too long
 Use del
  create schema people --creating schema
